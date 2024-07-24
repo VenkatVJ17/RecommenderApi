@@ -1,9 +1,19 @@
-package com.venkatscode.springboot.recommender_api;
+package com.venkatscode.springboot.recommender_api.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+import javax.annotation.processing.Generated;
+
+@Entity
 public class Movie {
-	int id;
-	String name;
-	double rating;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String name;
+	private double rating;
 
 	public Movie() {
 		
